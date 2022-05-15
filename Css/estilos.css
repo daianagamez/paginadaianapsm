@@ -1,0 +1,32 @@
+.nav-enlace{ /* vamos a modificar las caracteristicas de la clase que hemos creado*/
+display: inline-block;  /*efeecto bloque*/
+background-color: #FF7F50; /* para configurar el color de fondo*/
+color:white;              /* para modificar el color de las letras*/
+padding: 8px 16px;        /* define el tamaño de relleno del elemento*/
+text-decoration: none;     /*para eliminar el sudbrayado*/
+width: 100px;              /*ancho del elemento*/
+}
+.nav-enlace:hover{             /*nos permite cambiar las propiedades  cuando el cursor esta encima*/
+    background-color: #555;
+    color:white;
+}
+body{
+    background-color: #FFD4C4; /*color fondo*/
+}
+h1{
+    color: #800000; /*color letras*/
+    background: white; /*resaltar*/
+}
+h2{
+ color: #800000; /*color letras*/
+}
+h3{
+    color: #8A0829;
+}
+h4{
+    color: #8A0829;  
+}
+p{
+    font-family: "Times New Roman", Times, Sefif; /*tipo de letra*/
+    font-weight: 200;     /*espesor de la letra*/
+}
