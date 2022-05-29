@@ -1,0 +1,19 @@
+body{
+	background-color: #B8F0AC;
+}
+
+h1{
+	color: white;      /*color de fuente*/
+	background: #4C8D3F; /*resaltar*/
+}
+h2{
+	color: #529443;
+}
+h3{
+color: #31C011;  	
+}
+p{
+	font-family: "Times New Roman", Times, Sefif;
+	font-weight: 100;     /*espesor de la letra*/
+	color: color: #31C011;  ;
+}

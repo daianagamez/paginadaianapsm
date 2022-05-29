@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Carrusel de Imagenes</title>
+	<link rel="icon" type="image/jpg" href="Imagenes/Logo.png">
+	<link rel="stylesheet" type="text/css" href="Css/estilos.css">
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			outline: 0;
+			box-sizing: border-box;
+		}
+		html{
+			font-family: Arial, sans-serif;
+		}
+		img{
+			width: 100%
+			height: 100%;
+		}
+		.contenedor{
+			width: 100%;
+			position: relative;
+			height: 780px;
+		}
+		.botones{
+			font-size: 30px;
+			width: 70px;
+			height: 70px;
+			line-height: 70px;
+			border-radius: 50%;
+			background-color: rgba(0,0,0,.7);
+			text-align: center;
+			font-weight: bold;
+			position: absolute;
+			color: white;
+			box-shadow: 0 0 10px rgba(255,255,255,.6);
+			-webkit-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.botones:hover{
+			cursor: pointer;
+			transform: scale(1.2,1.2);
+		}
+		.atras{
+			left: 2%;
+			top: calc(50% - 70px);
+		}
+		.adelante{
+			right: 2%;
+			top: calc(50% - 70px);
+		}
+		header{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			transition: 0.7s;
+			padding: 30px 20px;
+			z-index: 10; /*para que no se cubra con la imagen que insertamos*/
+		}
+		header.abajo{ /*para configurar la clase javascript*/
+			background: white;
+			padding: 15px 20px;
+		}
+		header .logo{
+			position: relative;
+			color: white;
+			font-weight: bold; /*para que este mas gruesa la fuente*/
+			font-size: 2em; /*tamaño*/
+			letter-spacing: 2px; /*espaciado de letras*/
+			transition: 1.5s; /*transición*/
+			text-decoration: none; /*quitar subrayado*/ 
+		}
+		nav{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		header ul{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		header ul li{
+			list-style: none; /*quitar viñetas*/
+		}
+		header ul li a{
+			position: relative; /*para mantener posicion*/
+			font-family: helvetica; /*fuente*/
+			margin: 0 15px;   /*margen*/
+			text-decoration: none; /*eliminar subrayado*/
+			color: #fff; /*color letras*/
+			letter-spacing: 2px; /*espaciado entre las letras*/
+			font-weight: 600;  /*ancho de texto*/
+			transition: 0.7s;  /*efecto transición*/
+		}
+		.zona1{
+			position: relative; 	/*para mantener posición*/
+			width: 100%; /*ancho*/
+			height: 100vh; /*alto*/
+			background:url(Imagenes/fondo.jpg);
+			background-size: cover; /*para que no se duplique la imagen*/
+			background-position: center center;
+		}
+		header.abajo .logo,
+		header.abajo ul li a{
+			color: black;
+		}
+	</style>
+	<script language="javascript">
+		function galeria(){
+			if (!document.images)
+				return
+			document.images.img.src=
+			document.imagenes.imagen.options[document.imagenes.imagen.selectedIndex].value
+		}
+</script>
+</head>	
+<body>
+		<header>	
+		<a href="#" class="logo">EL SISTEMA SOLAR</a>
+		<nav>
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="jupiter.html">Jupiter</a></li>
+				<li><a href="saturno.html">Saturno</a></li>
+				<li><a href="urano.html">Urano</a></li>
+			    <li><a href="neptuno.html">Neptuno</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="zona1"></section>
+
+	<script type="text/javascript"> /*para detectar el movimiento de scroll y cambiar el estilo*/
+		window.addEventListener("scroll",function(){
+			var header = document.querySelector("header");
+			header.classList.toggle("abajo",window.scrollY>0)
+		})
+	</script>
+	<br>
+	<center>
+	<div class="contenedor">
+		<div class="atras botones">
+			&#60
+		</div>
+		<div class="adelante botones">
+			&#62
+		</div>
+		<img src="Imagenes/SistemaSolar.jpg" alt="" id="imagen">
+	</div>
+</center>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

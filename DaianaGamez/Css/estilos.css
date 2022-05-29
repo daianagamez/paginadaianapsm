@@ -1,0 +1,99 @@
+/*Maqueta No. 4*/
+
+
+*{
+	margin: 0; /*Para toda la pagina */
+}
+
+body{
+	background-color: #FFD4C4; /*color fondo*/
+	font-family: arial, helvetica, sans-seri; /*Fuente del cuerpo*/
+    margin: 0 auto; /*margen superior*/
+    width: 80%;/*ancho*/
+    }
+
+.header{
+	background-color: #FBAC59; /*color fondo de la cabecera*/
+	padding: 15px; /*margenes laterales de izq. a derech.*/
+	text-align: center; /*texto centrado*/
+	font-size: 20px; /*tamaño fuente*/
+	width: 97%;  /*ancho*/
+	height: 200px; /*largo*/
+}
+
+.nav{
+	background-color: white;
+	width: 100%; /*ancho*/
+    height: 35px; /*largo*/
+    text-align: center; /*colocar el menú hacia el centro*/
+}
+
+.nav-enlace{ /* vamos a modificar las caracteristicas de la clase que hemos creado*/
+display: inline-block;  /*efeecto bloque*/
+background-color: #FF7F50; /* para configurar el color de fondo*/
+color:white;              /* para modificar el color de las letras*/
+padding: 8px 16px;        /* define el tamaño de relleno del elemento*/
+text-decoration: none;     /*para eliminar el sudbrayado*/
+width: 100px;              /*ancho del elemento*/
+}
+.nav-enlace:hover{             /*nos permite cambiar las propiedades  cuando el cursor esta encima*/
+    background-color: #555;
+    color:white;
+}
+
+.main{
+    background-color: red; /*color fondo*/
+	width: 100%;  /*ancho*/
+	height: 4500px;  /*largo de la caja*/
+	display: flex; /*propiedad para alterar dimensiones y llenar el espacio posible*/
+	justify-content: center; /*alineado horizontal de la caja*/
+	align-items: center; /*alineado vertical*/
+}
+.section{
+    background-color: #F9E1E6; /*color fondo*/
+	width: 70%; /*ancho*/
+	height: 100%; /*largo*/
+}
+
+.art1{
+	background-color: #E0F9F6; /*color fondo*/	
+}
+
+.art2{
+		background-color: #CEF7E2; /*color fondo*/
+}
+.aside{
+	background-color: #F4ECCF; /*color fondo*/
+	width: 30%; /*ancho*/
+	height: 100%; /*largo*/
+}
+.footer{
+	background-color: #E0F4A9; /*color fondo*/
+	width: 100%; /*ancho*/
+	height: 100px; /*largo*/
+}
+
+h1{
+    color: white; /*color letras*/
+    background: #FE8100; /*resaltar*/
+}
+h2{
+ color: #800000; /*color letras*/
+}
+h3{
+    color: #8A0829;
+}
+h4{
+    color: #8A0829;  
+}
+p{
+    font-family: "Times New Roman", Times, Sefif; /*tipo de letra*/
+    font-weight: 200;     /*espesor de la letra*/
+}
+
+@media(max-width: 600px;){
+	nav, aside, section, main, header, article, footer {
+		width: 100%;
+		height: auto;
+	}
+}
