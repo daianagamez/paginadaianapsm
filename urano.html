@@ -5,6 +5,70 @@
 	<title>Urano</title>
 	<link rel="icon" type="image/jpg" href="Imagenes/Logo.png">
 	<link rel="stylesheet" type="text/css" href="Css/estilos.css">
+
+	<style>
+    .menu{
+    	width: 30px;
+    	display: flex;
+        flex-direction: column;
+        justify-content: center;
+    	cursor: pointer;
+    	transition: 0.4s ease-out;
+    	margin: 0 10px;
+
+     }
+		
+	.Linea1,
+	.Linea2,
+	.Linea3 {
+		width: 35px;
+		height: 5px;
+		background-color: white;
+		margin: 3px 0px;
+		transition: 0.4s ease-out;
+	}	
+
+	.change .Linea1{
+		transform: rotate(-45deg) translate(5px, 5px);
+		position: absolute;
+	}
+
+	.change .Linea2{
+		opacity: 0;
+	}
+
+	.change .Linea3{
+		transform: rotate(45deg) translate(5px, -5px);
+		position: absolute;
+	 }
+    .change .menu1{
+	 	visibility: visible;
+	 	opacity: 1;
+	}
+	.mainnav{
+	 	background-color: #FF7F50;;
+	    width: 100%; /*ancho*/
+        height: 45px; /*largo*/
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+	 }
+	.menu1{
+	 	margin: 0 10px;
+	 	padding: 0;
+	 	list-style: none;
+	 	display: flex;
+	 	opacity: 0;
+	 	visibility: hidden;
+	 }
+
+	.nav-enlace{
+	 	font-weight: bold;
+	 	letter-spacing: 2px; 
+		font-weight: 600;
+		font-family: helvetica; 
+	 }
+	</style>
 </head>
 <body>
 	<header class="header">
@@ -13,14 +77,20 @@
 		</hgroup>
 </header>
 
-<nav class="nav">
+<nav id="mainnav" class="mainnav" onclick="myFuction(this)">
+	<div class="menu" id="menu">
+       <div class="Linea1"></div>
+       <div class="Linea2"></div>
+       <div class="Linea3"></div>
+    </div>
+    <ul class="menu1">
 		<a href="index.html" class= "nav-enlace">Inicio</a></li>
 		<a href="jupiter.html" class= "nav-enlace">Jupiter</a></li>
 		<a href="saturno.html" class= "nav-enlace">Saturno</a></li>
 		<a href="urano.html" class= "nav-enlace">Urano</a></li>
 		<a href="neptuno.html" class= "nav-enlace">Neptuno</a></li>
 		<a href="carrusel.html" class= "nav-enlace">Carrusel</a></li>
-
+	</ul>
 </nav>
 <main class="main">
     <section class="section">
@@ -122,6 +192,7 @@
 	  <p>&copy; 2022 Mi primera Página Web "El sistema solar"</p>
 	  </center>
 </footer>
+<script src="js/scripts.js"></script>
 
 </body>
 </html>

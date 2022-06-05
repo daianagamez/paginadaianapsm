@@ -5,23 +5,46 @@
 	<title>Jupiter</title>
 	<link rel="icon" type="image/jpg" href="Imagenes/Logo.png">
 	<link rel="stylesheet" type="text/css" href="Css/estilos.css">
+	<style>
+	.sticky{
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+	.nav{
+		margin: 0;
+		border-bottom: 5px solid #F1EE7F;
+		 width: 100%;
+		 justify-content: center;
+         align-items: center;
+         left: 0;
+	}
+
+	.header{
+		height: 225px;
+	}
+
+	</style>
 </head>
 <body>
 	<header class="header">
+		<div>
 		<hgroup>
 		<img src="Imagenes/Logo.png" width="100" height="100"> <h1>El Sistema Solar</h1> 
+		<br>
+		<br>	
 		</hgroup>
-    </header>
-
-	<nav class="nav">
+		</div>
+		<nav class="nav">	
 		<a href="index.html" class= "nav-enlace">Inicio</a></li>
 		<a href="jupiter.html" class= "nav-enlace">Jupiter</a></li>
 		<a href="saturno.html" class= "nav-enlace">Saturno</a></li>
 		<a href="urano.html" class= "nav-enlace">Urano</a></li>
 		<a href="neptuno.html" class= "nav-enlace">Neptuno</a></li>
-		<a href="carrusel.html" class= "nav-enlace">Carrusel</a></li>
+		 <a href="carrusel.html" class= "nav-enlace">Carrusel</a></li>
+        </nav>
+    </header>
 
-    </nav>
 
      <main class="main">
      	<section class="section">
@@ -247,6 +270,6 @@ Además de los mencionados satélites galileanos, las distintas sondas espaciale
 	  </center>
 
 </footer>
-
+<script src="js/jup.js"></script>
 </body>
 </html>

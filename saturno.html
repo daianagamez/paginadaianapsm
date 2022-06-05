@@ -3,8 +3,57 @@
 <head>
 <meta charset="utf-8">
 	<title>Saturno</title>
-	<link rel="icon" type="image/jpg" href="Imagenes/Logo.png"></head>
+	<link rel="icon" type="image/jpg" href="Imagenes/Logo.png">
 	<link rel="stylesheet" type="text/css" href="Css/estilos.css">
+	<style>
+
+		.nave{
+			background: white;
+			padding: 10px;
+			color: black;
+			display: flex;
+			justify-content: space-around;
+		}
+		.nav-enlace1{
+			background: #FF7F50;
+			color: white;
+			margin: 10px 0;
+			padding: 10px 30px;
+			display: inline-block;
+			text-decoration: none;     
+
+		}
+		.nav-enlace1:hover{             /*nos permite cambiar las propiedades  cuando el cursor esta encima*/
+        background-color: #555;
+        color:white;
+
+}
+		.nav-boton{
+			background: #FF7F50;
+			color: white;
+			padding: 10px 0;
+			border: 2px solid #555; 
+			display: none;
+
+		}
+		@media (max-width: 600px){
+			nav{
+				flex-direction: column;
+			}
+			.nav-enlace{
+				margin: 10px 0;
+			}
+			.nav-boton{
+				display: inline-block;
+			}
+			.desaparece{
+				display: none;
+			}
+		}
+
+
+	</style>
+</head>
 <body>
 <header class="header">
 		<hgroup>
@@ -12,14 +61,14 @@
 		</hgroup>
 </header>
 
-<nav class="nav">
-		<a href="index.html" class= "nav-enlace">Inicio</a></li>
-		<a href="jupiter.html" class= "nav-enlace">Jupiter</a></li>
-		<a href="saturno.html" class= "nav-enlace">Saturno</a></li>
-		<a href="urano.html" class= "nav-enlace">Urano</a></li>
-		<a href="neptuno.html" class= "nav-enlace">Neptuno</a></li>
-		<a href="carrusel.html" class= "nav-enlace">Carrusel</a></li>
-
+<nav class="nave">
+	<button class="nav-boton" onclick="accion()">Menú</button>
+		<a href="index.html" class= "nav-enlace1 desaparece">Inicio</a></li>
+		<a href="jupiter.html" class= "nav-enlace1 desaparece">Jupiter</a></li>
+		<a href="saturno.html" class= "nav-enlace1 desaparece">Saturno</a></li>
+		<a href="urano.html" class= "nav-enlace1 desaparece">Urano</a></li>
+		<a href="neptuno.html" class= "nav-enlace1 desaparece">Neptuno</a></li>
+		<a href="carrusel.html" class= "nav-enlace1 desaparece">Carrusel</a></li>
 </nav>
 
 <main class="main">
@@ -116,6 +165,16 @@ Por otro lado, y al igual que Júpiter y Neptuno, Saturno irradia más calor al 
 	  <p>&copy; 2022 Mi primera Página Web "El sistema solar"</p>
 	  </center>
 </footer>
+
+<script>
+	function accion(){
+		console.log('está funcionando mi boton');
+		var ancla = document.getElementsByClassName('nav-enlace1');
+		for(var i = 0; i < ancla.length; i++) {
+			ancla[i].classList.toggle('desaparece');
+		}
+	}
+</script>
 
 </body>
 </html>

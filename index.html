@@ -5,22 +5,95 @@
 	<title> El Sistema Solar </title>
 	<link rel="icon" type="image/jpg" href="Imagenes/Logo.png">
 	<link rel="stylesheet" type="text/css" href="Css/estilos.css">
+
+	<style>
+    .menu{
+    	width: 30px;
+    	display: flex;
+        flex-direction: column;
+        justify-content: center;
+    	cursor: pointer;
+    	transition: 0.4s ease-out;
+    	margin: 0 10px;
+
+     }
+		
+	.Linea1,
+	.Linea2,
+	.Linea3 {
+		width: 35px;
+		height: 5px;
+		background-color: #333;
+		margin: 3px 0px;
+		transition: 0.4s ease-out;
+	}	
+
+	.change .Linea1{
+		transform: rotate(-45deg) translate(5px, 5px);
+		position: absolute;
+	}
+
+	.change .Linea2{
+		opacity: 0;
+	}
+
+	.change .Linea3{
+		transform: rotate(45deg) translate(5px, -5px);
+		position: absolute;
+	 }
+    .change .menu1{
+	 	visibility: visible;
+	 	opacity: 1;
+	}
+	.mainnav{
+	 	background-color: #F1EE7F;
+	    width: 100%; /*ancho*/
+        height: 45px; /*largo*/
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+	 }
+	.menu1{
+	 	margin: 0 10px;
+	 	padding: 0;
+	 	list-style: none;
+	 	display: flex;
+	 	opacity: 0;
+	 	visibility: hidden;
+	 }
+	.menu-item{
+	 	margin: 0 15px;
+	 }
+	.menu-link{
+	 	color: black;
+	 	text-decoration: none;
+	 }
+
+	</style>
 </head>
 <body>
+
 	<header class="header">
 		<hgroup>
 		<img src="Imagenes/Logo.png" width="100" height="100"> <h1>El Sistema Solar</h1> 
 		</hgroup>
     </header>
 
-	<nav class="nav">
-		<a href="index.html" class= "nav-enlace">Inicio</a></li>
-		<a href="jupiter.html" class= "nav-enlace">Jupiter</a></li>
-		<a href="saturno.html" class= "nav-enlace">Saturno</a></li>
-		<a href="urano.html" class= "nav-enlace">Urano</a></li>
-		<a href="neptuno.html" class= "nav-enlace">Neptuno</a></li>
-		<a href="carrusel.html" class= "nav-enlace">Carrusel</a></li>
 
+	<nav id="mainnav" class="mainnav" onclick="myFuction(this)">
+       <ul class="menu1">
+			<li class="menu-item"><a href="index.html" class="menu-link">Inicio</a></li>
+			<li class="menu-item"><a href="jupiter.html" class="menu-link">Jupiter</a></li>
+			<li class="menu-item"><a href="saturno.html" class="menu-link">Saturno</a></li>
+			<li class="menu-item"><a href="urano.html" class="menu-link">Urano</a></li>
+			<li class="menu-item"><a href="neptuno.html" class="menu-link">Neptuno</a></li>
+			<li class="menu-item"><a href="carrusel.html" class="menu-link">Carrusel</a></li>
+			 </ul>
+	   <div class="menu" id="menu">
+       <div class="Linea1"></div>
+       <div class="Linea2"></div>
+       <div class="Linea3"></div>
+       </div>
     </nav>
     <main class="main">
     	<section class="section">
@@ -179,6 +252,8 @@
 	  </center>
 
 </footer>
+
+<script src="js/scripts.js"></script>
 
 </body>
 </html>
